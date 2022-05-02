@@ -1,13 +1,14 @@
-# rtdl-repo-template
+# rtdl-tools
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSES)  
-Repository template for [rtdl](https://github.com/realtimedatalake/rtdl) repositories.
+Repository for various tools related to rtdl.
 
 ## rtdl - The Real-Time Data Lake ⚡️
 This is a sub-project of [rtdl](https://github.com/realtimedatalake/rtdl) – the real-time 
 data lake. Please go to rtdl's repo and give it a star.
 
 ## How to Use 🌱
-Use this to initiate other repositories.
+  * `migrateconfigs` - migrates rtdl stream configurations from PostgreSQL to files
+  * `go run migrateconfigs.go`
 
 ## License 🤝
 [MIT](./LICENSE)
