@@ -8,7 +8,7 @@ data lake. Please go to rtdl's repo and give it a star.
 
 ## How to Use 🌱
   * `migrateconfigs` - migrates rtdl stream configurations from PostgreSQL to files
-  * `go run migrateconfigs.go`
+  * `go run migrateconfigs.go <absolute path to directory containing config files. e.g. /Users/Dipanjan/rtdl/storage/configs`
 
 ## License 🤝
 [MIT](./LICENSE)

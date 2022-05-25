@@ -10,6 +10,13 @@ import (
 )
 
 func main() {
+
+	argsWithoutProg := os.Args[1:]
+
+	if len(argsWithoutProg) < 1 {
+		log.Fatal("Must provide absolute path of config files root directory as command line argument")
+	}
+
 	response, err := http.Get("http://localhost:80/getAllStreams")
 
 	if err != nil {
@@ -64,7 +71,9 @@ func main() {
 
 		configFile, _ := json.MarshalIndent(newStreamConfig, "", " ")
 
-		_ = ioutil.WriteFile("../storage/configs/"+streamId+".json", configFile, 0644)
+		//need to be able to specify config files root folder from command line
+
+		_ = ioutil.WriteFile(argsWithoutProg[0]+streamId+".json", configFile, 0644)
 
 	}
 
